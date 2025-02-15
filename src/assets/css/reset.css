@@ -1,0 +1,24 @@
+/* 清除列表默认样式 */
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* 清除链接默认样式 */
+a {
+  text-decoration: none;
+  color: inherit; /* 继承父级颜色 */
+  -webkit-tap-highlight-color: transparent; /* 去除移动端点击高亮 */
+}
+input {
+  margin: 0; /* 清除边距 */
+  padding: 0; /* 清除内边距 */
+  border: none; /* 移除边框 */
+  outline: none; /* 禁用聚焦轮廓 */
+  background: none; /* 清除背景色 */
+  -webkit-appearance: none; /* 移除iOS/WebKit默认样式 */
+  -moz-appearance: none; /* 移除Firefox默认样式 */
+  appearance: none; /* 标准写法 */
+}
