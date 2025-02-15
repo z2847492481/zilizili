@@ -6,10 +6,26 @@ import HelloWorld from './components/HelloWorld.vue'
 <template>
   <header>
     <div class="wrapper">
-      <h1>Test</h1>
+      <div class="box">
+        Box
+      </div>
     </div>
   </header>
   <!-- <RouterView /> -->
 </template>
 
-<style scoped></style>
+<style lang="scss" scoped>
+.wrapper {
+  width: 500px;
+  height: 300px;
+  border: 1px solid red;
+  background-color: _vars.$primary-color;
+  @include _mix.center;
+
+  .box {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+  }
+}
+</style>
