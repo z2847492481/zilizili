@@ -1,30 +1,17 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
+import NavBar from "@/components/layout/NavBar.vue"
 </script>
 
 <template>
-  <header>
-    <div class="wrapper">
-      <div class="box">
-        Box
-      </div>
-    </div>
-  </header>
+  <div class="app">
+    <NavBar />
+  </div>
   <!-- <RouterView /> -->
 </template>
 
 <style lang="scss" scoped>
-.wrapper {
-  width: 500px;
-  height: 300px;
-  border: 1px solid red;
-  background-color: _vars.$primary-color;
-  @include _mix.center;
-
-  .box {
-    width: 100px;
-    height: 100px;
-    border: 1px solid black;
-  }
+.app {
+  height: 2000px;
 }
 </style>
