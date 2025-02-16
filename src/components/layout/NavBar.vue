@@ -1,9 +1,16 @@
 <script setup lang="ts">
+import { getVideoById } from "@/api/video";
 import { debounce as _debounce } from "lodash"
+import { onMounted } from "vue";
 const doSearchAdvice = function (event: Event) {
     console.log("event", event)
 }
 const searchAdvice = _debounce(doSearchAdvice, 300)
+
+onMounted(async () => {
+    const video = await getVideoById(1)
+    console.log(video);
+})
 </script>
 
 <template>

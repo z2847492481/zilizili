@@ -28,3 +28,19 @@ npm install -D sass
 ## 1、Dart Sass 团队正式宣布从 1.80.0 版本开始弃用 @import，并计划在 Dart Sass 3.0.0 中完全移除该语法。
 
 新版本的sass使用中不要再使用@import
+
+## 2、代理问题
+
+vite-proxy的配置如下：
+
+```ts
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8080', // 目标服务器地址
+        changeOrigin: true, // 是否更改请求源
+        rewrite: (path) => path.replace(/^\/api/, ''), // 重写路径，去掉 /api 前缀
+      },
+    },
+  },
+```
