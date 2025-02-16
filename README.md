@@ -46,3 +46,7 @@ vite-proxy的配置如下：
 ```
 
 代理的原理（没研究过）应该是vite的服务器做了反向代理，所以我们的baseURL的端口号要写vite服务器启动的端口5173
+
+```env
+VITE_API_BASEURL=http://localhost:5173/api
+```
