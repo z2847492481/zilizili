@@ -1,5 +1,9 @@
 <script setup lang="ts">
-
+import { debounce as _debounce } from "lodash"
+const doSearchAdvice = function (event: Event) {
+    console.log("event", event)
+}
+const searchAdvice = _debounce(doSearchAdvice, 300)
 </script>
 
 <template>
@@ -26,7 +30,7 @@
             </ul>
             <div class="center-search">
                 <div class="search-content">
-                    <input type="text">
+                    <input @input="searchAdvice" type="text">
                 </div>
                 <div class="search-btn">
                     <svg t="1739635055794" class="icon" viewBox="0 0 1024 1024" version="1.1"
